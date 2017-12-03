@@ -10,6 +10,7 @@
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+	<div class="wrapper">
 <div class="twoTopForms">
 	<div class="topSignUpFormBlock">
 		<div class="topSignUpFormHeader">
@@ -41,8 +42,9 @@
 					<input class="topSignInForm__pass" type="password" placeholder='&#xf023;    Password'>
 					<div class="topSignInForm__checkRememberPassBlock">
 						<div class="topSignInForm__checkButton">
-							<input type="checkbox" id="check" name="rememder" value="rememderPassword" checked><label for="check" class="topSignInForm__remember">Remember password?</label></div>
-					
+							<input type="checkbox" id="check" name="rememder" value="rememderPassword" checked>
+							<label for="check" class="topSignInForm__remember">Remember password?</label>
+						</div>
 					</div>
 					<button class="topSignInForm__button topSignInForm__button-signIn"><span>Sign In</span></button>
 					<div class="topSignInForm__or"><span>OR</span></div>
@@ -52,12 +54,77 @@
 					</div>
 			</form>
 	</div>
+</div>
 
-</div>	
 
+<!--   Four small forms  -->
+<div class="fourSmallForms">
+
+	<form action="" class="smallSignUpForm">
+		<span class="smallSignUpForm__title">SIGN UP</span>
+		<span class="smallSignUpForm__advice">Alredy Registered?</span>
+		<input class="smallSignUpForm__email" type="text" placeholder='&#xf0e0;   E-mail or login'>
+		<input class="smallSignUpForm__pass" type="password" placeholder='&#xf023;    Password'>
+		<p class="smallSignUpForm__forgot">Forgot password?</p>
+		<button class="smallSignUpForm__button smallSignUpForm__button-signUp"><span>Sign Up</span></button>
+		<div class="smallSignUpForm__or"><span>OR</span></div>
+		<div class="smallSignUpForm__buttons">
+		<button class="smallSignUpForm__button smallSignUpForm__button-facebook">
+			<i class="fa fa-facebook"></i>
+			<span>Facebook</span>
+		</button>
+		<button class="smallSignUpForm__button smallSignUpForm__button-twitter">
+			<i class="fa fa-twitter"></i>
+			<span>Twitter</span>
+		</button>
+	</div>
+	</form>
+
+</form>
+
+	<form action="" class="smallSignInForm">
+		<span class="smallSignInForm__title">SIGN IN</span>
+		<span class="smallSignInForm__advice">Alredy Registered?</span>
+		<input class="smallSignInForm__email" type="text" placeholder='&#xf0e0;   E-mail or login'>
+		<input class="smallSignInForm__pass" type="password" placeholder='&#xf023;    Password'>
+		<div class="smallSignInForm__checkRememberPassBlock">
+			<div class="smallSignInForm__checkButton">
+				<input type="checkbox" id="check1" name="rememder1" value="rememderPassword" checked>
+				<label for="check1" class="smallSignInForm__remember">Remember password?</label>
+			</div>
+		</div>
+		<button class="smallSignInForm__button smallSignUInForm__button-signIn"><span>Sign Up</span></button>
+		<div class="smallSignInForm__or"><span>OR</span></div>
+		<div class="smallSignInForm__buttons">
+		<button class="smallSignInForm__button smallSignInForm__button-facebook">
+			<i class="fa fa-facebook"></i>
+			<span>Facebook</span>
+		</button>
+		<button class="smallSignInForm__button smallSignInForm__button-twitter">
+			<i class="fa fa-twitter"></i>
+			<span>Twitter</span>
+		</button>
+		</div>
+	</form>
+<div class="blockResetSubscrForms">
+	<form action="" class="smallResetForm">
+		<span class="smallResetForm__title">RESET PASSWORD</span>
+		<span class="smallResetForm__advice">Sign In</span>
+		<input class="smallResetForm__email" type="text" placeholder='&#xf0e0;   E-mail'>
+		<button class="smallResetForm__button smallResetForm__button-signIn"><span>Sign Up</span></button>
+	</form>
+	<form action="" class="smallSubscribingForm">
+		<span class="smallSubscribingForm__title">SUBSCRIBING</span>
+		<p class="smallSubscribingForm__description">We will never send you spam or some other trash</p>
+		<input class="smallSubscribingForm__email" type="text" placeholder='&#xf0e0;   E-mail'>
+		<button class="smallSubscribingForm__button smallSubscribingForm__button-submite"><span>></span></button>
+	</form>
+</div>
+</div>
 
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
+</div>
 </body>
 </html>
