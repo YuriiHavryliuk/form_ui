@@ -6,6 +6,7 @@
 body {
   max-width: 1180px;
   font-family: 'Cabin SemiBold Italic', arial;
+  margin: 0 auto;
 }
 
 button {
@@ -31,21 +32,26 @@ button span {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   color: #ffffff;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin: 0 100px;
+  margin-top: 95px;
 }
 
-.topSignUpFormHeader {
+.topSignUpFormHeader, .topSignInFormHeader {
   max-width: 460px;
   position: relative;
   background: rgba(0, 0, 0, 0.6);
   margin-bottom: -4px;
 }
 
-.topSignUpFormHeader__image {
+.topSignUpFormHeader__image, .topSignInFormHeader__image {
   width: 100%;
   max-height: 144px;
 }
 
-.topSignUpFormHeader__advice {
+.topSignUpFormHeader__advice, .topSignInFormHeader__advice {
   font-size: 14px;
   font-size: 14px;
   letter-spacing: 0.28px;
@@ -54,7 +60,7 @@ button span {
   top: 12%;
 }
 
-.topSignUpFormHeader__title {
+.topSignUpFormHeader__title, .topSignInFormHeader__title {
   font-size: 32px;
   font-weight: 400;
   letter-spacing: 1.6px;
@@ -68,7 +74,7 @@ button span {
           transform: translate(33.333%, 33.33%);
 }
 
-.topSignUpForm {
+.topSignUpForm, .topSignInForm {
   max-width: 460px;
   max-height: 384px;
   -webkit-border-radius: 0 0 6px 6px;
@@ -91,11 +97,11 @@ button span {
   position: relative;
 }
 
-.topSignUpForm input[type="text"] {
+.topSignUpForm input[type="text"], .topSignInForm input[type="text"] {
   margin-bottom: 25px;
 }
 
-.topSignUpForm input[type="text"], .topSignUpForm input[type="password"] {
+.topSignUpForm input[type="text"], .topSignUpForm input[type="password"], .topSignInForm input[type="text"], .topSignInForm input[type="password"] {
   width: 80%;
   -webkit-border-radius: 6px;
           border-radius: 6px;
@@ -103,7 +109,7 @@ button span {
   background-color: #ffffff;
   height: 48px;
   padding-left: 10px;
-  color: #b4bbc2;
+  color: black;
   font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -111,7 +117,7 @@ button span {
   letter-spacing: 0.2px;
 }
 
-.topSignUpForm__forgot {
+.topSignUpForm__forgot, .topSignInForm__forgot {
   color: #b4bbc2;
   letter-spacing: 0.28px;
   font-size: 14px;
@@ -120,8 +126,8 @@ button span {
   top: 0px;
 }
 
-.topSignUpForm__button {
-  width: 80%;
+.topSignUpForm__button, .topSignInForm__button {
+  width: 82%;
   -webkit-border-radius: 6px;
           border-radius: 6px;
   border: none;
@@ -129,15 +135,15 @@ button span {
   height: 48px;
 }
 
-.topSignUpForm__or {
+.topSignUpForm__or, .topSignInForm__or {
   color: #c6ccd2;
-  width: 80%;
+  width: 82%;
   overflow: hidden;
   text-align: center;
   margin: 25px 0px;
 }
 
-.topSignUpForm__or:before, .topSignUpForm__or:after {
+.topSignUpForm__or:before, .topSignUpForm__or:after, .topSignInForm__or:before, .topSignInForm__or:after {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -147,28 +153,28 @@ button span {
   position: relative;
 }
 
-.topSignUpForm__or:before {
+.topSignUpForm__or:before, .topSignInForm__or:before {
   margin-left: -80%;
   left: -10px;
 }
 
-.topSignUpForm__or:after {
+.topSignUpForm__or:after, .topSignInForm__or:after {
   margin-right: -80%;
   right: -10px;
 }
 
-.topSignUpForm__or span {
+.topSignUpForm__or span, .topSignInForm__or span {
   display: inline-block;
   vertical-align: middle;
 }
 
-.topSignUpForm__button-facebook {
+.topSignUpForm__button-facebook, .topSignInForm__button-facebook {
   background-color: #3162a2;
   margin-right: 20px;
 }
 
-.topSignUpForm__buttons {
-  width: 80%;
+.topSignUpForm__buttons, .topSignInForm__buttons {
+  width: 82%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,10 +188,84 @@ button span {
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  margin-bottom: 30px;
 }
 
-.topSignUpForm__buttons span {
+.topSignUpForm__buttons span, .topSignInForm__buttons span {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.32px;
+}
+
+.topSignInForm__button-signIn {
+  background-color: #24aa98;
+}
+
+.topSignInForm__remember {
+  color: #b4bbc2;
+  letter-spacing: 0.28px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.topSignInForm__checkRememberPassBlock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  position: relative;
+  -webkit-transform: translateX(23%);
+      -ms-transform: translateX(23%);
+          transform: translateX(23%);
+}
+
+.topSignInForm__checkRememberPassBlock .topSignInForm__checkButton input[type=checkbox] {
+  display: none;
+}
+
+.topSignInForm__checkRememberPassBlock .topSignInForm__checkButton {
+  position: relative;
+  padding-left: 25px;
+  margin: 25px 0px;
+}
+
+.topSignInForm__checkRememberPassBlock .topSignInForm__checkButton label:after {
+  content: '';
+  display: block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #939598;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  position: absolute;
+  line-height: 18px;
+  top: 0;
+  left: 0;
+}
+
+.topSignInForm__checkRememberPassBlock .topSignInForm__checkButton input[type=checkbox]:checked + label:after {
+  content: '\2713';
+  color: white;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+  border-color: #24aa98;
+  font-weight: 600;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  background-color: #24aa98;
+  line-height: 18px;
 }
