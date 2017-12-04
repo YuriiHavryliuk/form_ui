@@ -2,6 +2,9 @@
 	font-family: "RobotoRegular"
 	src : url("fonts/Cabin-SemiBold.ttf")
 
+*
+	box-sizing: border-box
+
 body
 	max-width: 1180px
 	font-family: 'Cabin SemiBold Italic', arial
@@ -64,7 +67,6 @@ button
 
 .topSignUpForm, .topSignInForm, .smallSignUpForm, .smallSignInForm, .smallResetForm
 	max-width: 460px
-	max-height: 384px
 	border-radius: 0 0 6px 6px
 	background-color: #f2f5f8
 	padding-top: 30px
@@ -77,7 +79,7 @@ button
 		margin-bottom: 25px
 
 	input[type="text"], input[type="password"]
-		width: 80%
+		width: 82%
 		border-radius: 6px
 		border: 2px solid #c6ccd2
 		background-color: #ffffff
@@ -143,6 +145,7 @@ button
 		justify-content: space-between
 		flex-flow: row nowrap
 		margin-bottom: 30px
+		height: 48px
 
 		span
 			font-size: 16px
@@ -173,7 +176,7 @@ button
 	.topSignInForm__checkButton
 		position: relative
 		padding-left: 25px
-		margin: 25px 0px
+		margin: 14px 0px
 
 		label
 			&:after
@@ -240,7 +243,7 @@ button
 		margin-top: 25px
 
 	&__forgot
-		margin-bottom: 30px
+		margin-bottom: 20px
 
 	&__button-facebook, &__button-twitter
 		height: 36px
@@ -256,7 +259,7 @@ button
 .smallSignInForm__checkButton
 	position: relative
 	padding-left: 25px
-	margin: 25px 0px
+	margin: 16px 0px
 
 	label
 		&:after
@@ -288,12 +291,13 @@ button
 /* Small Reset form   */
 .smallResetForm
 	margin-bottom: 30px
-	height: 180px
+	height: 215px
+	padding-bot
 
 
 .smallResetForm
 	input[type="text"]
-		width: 80%
+		width: 82%
 		border-radius: 6px
 		border: 2px solid #c6ccd2
 		background-color: #ffffff
@@ -313,6 +317,12 @@ button
 		background-color: #db7560
 		height: 48px
 
+	&__title
+		margin-top: 2%
+
+	&__advice
+		margin-top: 2%
+
 /* Small Subscribe form   */
 
 .smallSubscribingForm
@@ -322,7 +332,7 @@ button
 	max-width: 300px
 	position: relative
 	text-align: center
-	padding-bottom: 25px
+	padding-bottom: 35px
 
 	input[type="text"]
 		width: 62%
@@ -337,6 +347,8 @@ button
 		font-weight: 400
 		line-height: 24px
 		letter-spacing: 0.2px
+		margin-right: 13px
+		margin-top: 10px
 
 
 	&__button
@@ -353,7 +365,7 @@ button
 		letter-spacing: 0.32px
 		position: absolute
 		left: 4%
-		top: 4%
+		top: 8%
 
 	&__description
 		max-width: 85%
@@ -364,7 +376,200 @@ button
 		font-weight: 400
 		line-height: 18px
 		letter-spacing: 0.28px
-	
+
+/* Small contact form    */
+.bigTwoForms
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	margin-top: 75px
+	width: 100%
+
+	.formContact
+		flex: 1
+		background-color: #f2f5f8
+		border-radius: 6px
+		display: flex
+		flex-flow: column wrap
+		align-items: center
+		max-width: 300px
+		position: relative
+
+		input[type="text"]
+			margin-bottom: 25px
+
+		input[type="text"], textarea
+			width: 84%
+			border-radius: 6px
+			border: 2px solid #c6ccd2
+			background-color: #ffffff
+			height: 48px
+			padding-left: 15px
+			padding-right: 15px
+			font-family: FontAwesome, "Open Sans", Verdana, sans-serif
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.2px
+
+		textarea
+			height: 144px
+			padding-top: 15px
+
+		&__title
+			font-size: 16px
+			color: #393635
+			font-weight: 600
+			letter-spacing: 0.32px
+			position: absolute
+			left: 4%
+			top: 2%
+
+		&__NameLabel
+			margin-top: 65px
+
+		label
+			margin-bottom: 10px
+			color: #b4bbc2
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.32px
+			align-self: flex-start
+			position: relative
+			left: 8%
+
+		&__button
+			margin-top: 25px
+			width: 45%
+			border-radius: 6px
+			border: none
+			background-color: #24aa98
+			height: 48px
+			position: relative
+			align-self: flex-end
+			right: 8%
+
+/* Big contact form    */
+
+.bigTwoForms
+	.bigForm
+		flex: 2
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+		max-width: 620px
+		position: relative
+		padding-top: 65px
+		background-color: #f2f5f8
+		border-radius: 6px
+
+		input[type="text"], textarea, select
+			width: 250px
+			border-radius: 6px
+			border: 2px solid #c6ccd2
+			background-color: #ffffff
+			height: 48px
+			padding-left: 15px
+			padding-right: 15px
+			font-family: FontAwesome, "Open Sans", Verdana, sans-serif
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.2px
+			margin-bottom: 25px
+			margin-top: 10px
+
+		&__title
+			font-size: 16px
+			color: #393635
+			font-weight: 600
+			letter-spacing: 0.32px
+			position: absolute
+			left: 4%
+			top: 2%
+
+		label
+			color: #b4bbc2
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.32px
+			align-self: flex-start
+
+		select
+			background-color: #65abd0
+			border: none
+			color: white
+			letter-spacing: 0.32px
+
+		textarea
+			width: 560px
+			height: 144px
+			padding-top: 15px
+			letter-spacing: 0.6px
+
+		&__checkButton input[type=checkbox]
+			display: none
+
+		&__checkButton
+			position: relative
+			padding-left: 25px
+			margin: 16px 0px
+
+			label
+				&:after
+					content: ''
+					display: block
+					height: 16px
+					width: 16px
+					border: 1px solid #939598
+					border-radius: 6px
+					position: absolute
+					line-height: 18px
+					top: 0
+					left: 0
+
+
+			input[type=checkbox]
+				&:checked + label:after
+					content: '\2713'
+					color: white
+					text-align: center
+					border-color: #24aa98
+					font-weight: 600
+					border-radius: 6px
+					font-size: 10px
+					width: 16px
+					height: 16px
+					background-color: #24aa98
+					line-height: 18px
+
+.bigForm__checkRememberPassBlock
+	display: flex
+	flex-flow: ror wrap
+	justify-content: space-around
+	align-items: center
+	margin-top: -8px
+
+
+	.bigForm__checkButton
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		letter-spacing: 0.32px
+		position: relative
+		width: 500px
+		
+.bigForm__button
+	width: 30%
+	border-radius: 6px
+	border: none
+	background-color: #24aa98
+	height: 48px
+
+
+
 
 			
 				
