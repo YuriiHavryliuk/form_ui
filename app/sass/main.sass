@@ -497,7 +497,7 @@ button
 			letter-spacing: 0.32px
 			align-self: flex-start
 
-		select
+		select 
 			background-color: #65abd0
 			border: none
 			color: white
@@ -567,6 +567,489 @@ button
 	border: none
 	background-color: #24aa98
 	height: 48px
+
+
+/* Cart form    */
+
+.formCart
+	margin-top: 70px
+	border-radius: 6px
+	background-color: #f2f5f8
+	position: relative
+	padding-bottom: 30px
+
+.formCartTable
+	border-spacing: 0
+	margin: 0 auto
+	padding-top: 65px
+	width: 94%
+
+	.bottomLineSubtotal td
+		border-style: hidden
+
+
+	td, th
+		padding: 10px 5px 3px 18px
+		border-bottom: 2px solid #dee2e7
+		text-align: center	
+
+
+	th
+		padding-bottom: 15px
+
+	td:nth-child(2), th:nth-child(2)
+		text-align: left
+	.img
+		width: 14%
+
+	.item
+		width: 40%
+
+	.price, .total
+		width: 25%
+
+	.quantity
+		width: 14%
+
+	thead tr th
+		color: #b4bbc2
+
+	&__title
+		font-size: 16px
+		color: #393635
+		font-weight: 600
+		letter-spacing: 0.32px
+		position: absolute
+		left: 2%
+		top: 4%
+
+
+	span
+		color: #383737
+		font-size: 16px
+		font-weight: 600
+		line-height: 20px
+		letter-spacing: 0.32px
+
+	.span_color
+		color: #b4bbc2
+		font-size: 14px
+		line-height: 20px
+		letter-spacing: 0.28px
+		font-weight: 400
+
+/* Panel Check color (tr-1)    */
+.checkColorPanel #yellowRadio, #blueRadio, #greenRadio, #redRadio, #blackRadio
+	display: none
+
+.checkColorPanel
+	position: relative
+	padding-left: 25px
+	margin: 16px 0px
+
+	.colorLabel
+		&:after
+			content: ''
+			display: block
+			height: 16px
+			width: 16px
+			border-radius: 50px
+			position: absolute
+			line-height: 18px
+			top: 0
+
+	.yellowLabel
+		&:after
+			left: 0px
+			background-color: #d9c26c
+
+	.blueLabel
+		&:after
+			background-color: #65abd0
+			left: 22px
+
+	.greenLabel
+		&:after
+			background-color: #24aa98
+			left: 44px
+
+	.redLabel
+		&:after
+			background-color: #db7560
+			left: 66px
+
+	.blackLabel
+		&:after
+			background-color: black
+			left: 88px
+
+	#yellowRadio
+		&:checked + .yellowLabel:after
+			content: '\2713'
+			color: white
+			text-align: center
+			font-weight: 600
+			border-radius: 50px
+			font-size: 10px
+			width: 16px
+			height: 16px
+			background-color: #d9c26c
+			line-height: 18px
+
+	#blueRadio
+		&:checked + .blueLabel:after
+			content: '\2713'
+			color: white
+			text-align: center
+			font-weight: 600
+			border-radius: 50px
+			font-size: 10px
+			width: 16px
+			height: 16px
+			background-color: #65abd0
+			line-height: 18px
+
+	#greenRadio
+		&:checked + .greenLabel:after
+			content: '\2713'
+			color: white
+			text-align: center
+			font-weight: 600
+			border-radius: 50px
+			font-size: 10px
+			width: 16px
+			height: 16px
+			background-color: #24aa98
+			line-height: 18px
+
+	#redRadio
+		&:checked + .redLabel:after
+			content: '\2713'
+			color: white
+			text-align: center
+			font-weight: 600
+			border-radius: 50px
+			font-size: 10px
+			width: 16px
+			height: 16px
+			background-color: #db7560
+			line-height: 18px
+
+	#blackRadio
+		&:checked + .blackLabel:after
+			content: '\2713'
+			color: white
+			text-align: center
+			font-weight: 600
+			border-radius: 50px
+			font-size: 10px
+			width: 16px
+			height: 16px
+			background-color: black
+			line-height: 18px
+
+/* Panel Check color  */
+
+.checkColorPanel1 #brownRadio1, #blackRadio1
+	display: none
+
+
+.checkColorPanel1
+	position: relative
+	padding-left: 70px
+	
+
+	.colorLabel1
+		&:after
+			content: ''
+			display: block
+			height: 16px
+			width: 16px
+			border-radius: 50px
+			position: absolute
+			line-height: 18px
+			top: 0
+
+	.brownLabel1
+		&:after
+			left: 0px
+			background-color: brown
+
+	.blackLabel1
+		&:after
+			background-color: black
+			left: 22px
+
+	#brownRadio1
+		&:checked + .brownLabel1:after
+			content: '\2713'
+			color: white
+			text-align: center
+			font-weight: 600
+			border-radius: 50px
+			font-size: 10px
+			width: 16px
+			height: 16px
+			background-color: brown
+			line-height: 18px
+
+	#blackRadio1
+		&:checked + .blackLabel1:after
+			content: '\2713'
+			color: white
+			text-align: center
+			font-weight: 600
+			border-radius: 50px
+			font-size: 10px
+			width: 16px
+			height: 16px
+			background-color: black
+			line-height: 18px
+
+.formCartTable
+	.span_size, .titleSubTotal
+		color: #b4bbc2
+		font-size: 14px
+		line-height: 20px
+		letter-spacing: 0.28px
+		font-weight: 400
+		position: relative
+
+
+	.selectSize
+		background-color: #c6ccd2
+		border: none
+		border-radius: 4px
+		color: white
+		font-size: 12px
+		letter-spacing: 0.24px
+
+
+/* button plus and minus    */
+
+.plusMinusValue
+	border: none
+	max-width: 35px
+	text-align: center
+	background-color: #f2f5f8
+	font-size: 16px
+	font-weight: 600
+	line-height: 20px
+	letter-spacing: 0.32px
+	cursor: pointer
+
+.plusMinusValue:focus
+	outline: none
+
+.minus
+	width: 26px
+	height: 26px
+	border-radius: 6px
+	background-color: #db7560
+	padding: 3px 6px
+	cursor: pointer
+	color: white !important
+	font-weight: 400 !important
+
+.plus
+	width: 26px
+	height: 26px
+	border-radius: 6px
+	background-color: #24aa98
+	padding: 3px 6px
+	cursor: pointer
+	color: white !important
+	font-weight: 400 !important
+
+.resultSumm
+	float: right
+	margin-top: 8px
+	margin-right: 35%
+	color: #b4bbc2
+	font-size: 14px
+	line-height: 32px
+	letter-spacing: 0.28px
+
+.subtotal, .dollarSubtootal
+	color: #383737
+	font-size: 16px
+	font-weight: 600
+	line-height: 20px
+	letter-spacing: 0.32px
+
+.dollarSubtootal
+	padding-left: 15px
+
+.butttonOrder
+	width: 65%
+	float: right
+	border-radius: 6px
+	border: none
+	background-color: #24aa98
+	height: 48px
+
+	span
+		color: #ffffff
+		font-size: 18px
+		font-weight: 400
+		line-height: 24px
+		letter-spacing: 0.32px
+
+.ContinueShop
+	float: left
+	text-decoration: none
+
+	span
+		color: #65abd0
+		font-size: 16px
+		font-weight: 600
+		line-height: 24px
+		letter-spacing: 0.32px
+
+/* shipping adress and contact info form    */
+.formsShipAdrAndContInfo
+	width: 100%
+	padding-bottom: 70px
+	margin-top: 20px
+	border-radius: 6px
+	background-color: #f2f5f8
+	position: relative
+	padding-top: 65px
+
+
+	.formShippingAdress
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+		margin-bottom: 60px
+
+		&__title
+			font-size: 16px
+			color: #393635
+			font-weight: 600
+			letter-spacing: 0.32px
+			position: absolute
+			left: 2%
+			top: 4%
+
+		input[type="text"], select
+			width: 273px
+			border-radius: 6px
+			border: 2px solid #c6ccd2
+			background-color: #ffffff
+			height: 48px
+			padding-left: 15px
+			padding-right: 15px
+			font-family: FontAwesome, "Open Sans", Verdana, sans-serif
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.2px
+			margin-top: 10px
+			margin-bottom: 20px
+
+		label
+			color: #b4bbc2
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.32px
+
+		select 
+			background-color: #d9c26c
+			border: none
+			color: white
+			letter-spacing: 0.32px
+
+
+.formContactInfoBlock
+	&__title
+		font-size: 16px
+		color: #393635
+		font-weight: 600
+		letter-spacing: 0.32px
+		margin-left: 2%
+
+.butttonPayMethod
+	width: 22%
+	float: right
+	border-radius: 6px
+	border: none
+	background-color: #24aa98
+	height: 48px
+	margin-right: 2%
+
+	span
+		color: #ffffff
+		font-size: 18px
+		font-weight: 400
+		line-height: 24px
+		letter-spacing: 0.32px
+
+.ReturnToCart
+	float: left
+	text-decoration: none
+	margin-left: 2%
+
+	span
+		color: #65abd0
+		font-size: 16px
+		font-weight: 600
+		line-height: 45px
+		letter-spacing: 0.32px
+
+
+.formsShipAdrAndContInfo
+	.formContactInfo
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+		margin-bottom: 15px
+		margin-top: 25px
+		position: relative
+
+		&__title
+			font-size: 16px
+			color: #393635
+			font-weight: 600
+			letter-spacing: 0.32px
+			position: absolute
+			left: 2%
+			top: 4%
+
+		input[type="text"], select
+			width: 273px
+			border-radius: 6px
+			border: 2px solid #c6ccd2
+			background-color: #ffffff
+			height: 48px
+			padding-left: 15px
+			padding-right: 15px
+			font-family: FontAwesome, "Open Sans", Verdana, sans-serif
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.2px
+			margin-top: 10px
+			margin-bottom: 20px
+
+		label
+			color: #b4bbc2
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: 0.32px
+
+
+
+
+
+
+
+
+
+
+
 
 
 
