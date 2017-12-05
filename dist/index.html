@@ -121,6 +121,8 @@
 	</form>
 </div>
 </div>
+
+<!--   Two contact form  -->
 <div class="bigTwoForms">
 	<form action="" class="bigForm">
 		<span class="bigForm__title">CONTACT</span>
@@ -145,7 +147,8 @@
 				<label for="sendMeAcopy" class="bigForm__sendMeAcopy">Send me a copy</label>
 			</div>
 		
-		<button class="bigForm__button bigForm__button-signUp"><span>Send</span></button>		</div>
+		<button class="bigForm__button bigForm__button-signUp"><span>Send</span></button>		
+	</div>
 	</form>
 
 	<form action="" class="formContact">
@@ -161,9 +164,194 @@
 	</form>
 </div>
 
+<!--   Cart form  -->
+
+<div class="formCart">
+	<table class="formCartTable">
+	<form action="">
+	<span class="formCartTable__title">CART</span>
+		<colgroup>
+			<col class="img"/>
+			<col class="item"/>
+			<col class="price"/>
+			<col class="quantity"/>
+			<col class="total"/>
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">Item</th>
+				<th scope="col">Price</th>
+				<th scope="col">Quantity</th>
+				<th scope="col">Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tableListItem">
+				<td><img class="imgCart" src="img/cartBag.png" alt=""></td>
+				<td>
+					<span>Leather Bag</span><br>
+	
+				</td>
+				<td><span>$</span><span class="price" >199</span></td>
+				<td>
+					<span>
+					<div class="number">
+					    <span onclick="subtotal();" class="minus">−</span>
+					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total1(this);"/>
+					    <span onclick="subtotal();" class="plus">+</span>
+					</div>
+					</span>
+			</td>
+				<td><span>$</span><span class="total1">199</span></td>
+			</tr>
+			<tr>
+				<td><img class="imgCart" src="img/cartBelt.png" alt=""></td>
+				<td><span>Leather Belt</span><br>
+						<span class="span_color">Color:</span> 
+						<span class="checkColorPanel">
+							<input type="radio" id="yellowRadio" name="color" value="yellow" chacked>
+							<label for="yellowRadio" class="colorLabel yellowLabel"></label>
+							<input type="radio" id="blueRadio" name="color" value="blue" >
+							<label for="blueRadio" class="colorLabel blueLabel"></label>
+							<input type="radio" id="greenRadio" name="color" value="green" >
+							<label for="greenRadio" class="colorLabel greenLabel"></label>
+							<input type="radio" id="redRadio" name="color" value="red" >
+							<label for="redRadio" class="colorLabel redLabel"></label>
+							<input type="radio" id="blackRadio" name="color" value="black" >
+							<label for="blackRadio" class="colorLabel blackLabel"></label>
+						</span>
+
+				</td>
+				<td><span>$</span><span class="price1" >49</span></td>
+				<td>
+					<span>
+					<div class="number">
+					    <span onclick="subtotal();" class="minus">−</span>
+					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total2(this);"/>
+					    <span onclick="subtotal();" class="plus">+</span>
+					</div>					
+					</span>
+				</td>
+				<td><span>$</span><span class="total2">49</span></td>
+			</tr>
+				<tr>
+				<td><img class="imgCart" src="img/cartShoes.png" alt=""></td>
+				<td><span>Leather Shoes</span><br>
+				<span class="span_color">Color:</span> 
+						<span class="checkColorPanel1">
+							<input type="radio" id="brownRadio1" name="color1" value="brown1" chacked>
+							<label for="brownRadio1" class="colorLabel1 brownLabel1"></label>
+							<input type="radio" id="blackRadio1" name="color1" value="black1" >
+							<label for="blackRadio1" class="colorLabel1 blackLabel1"></label>
+						</span>
+						<span class="span_size">Size:</span>
+						<select name="size" class="selectSize">
+							<option value="44">44</option>
+							<option value="42">42</option>
+							<option value="40">40</option>
+						</select>
+
+
+				</td>
+				<td><span>$</span><span class="price2" >199</span></td>
+				<td>
+					<span>
+					<div class="number">
+					    <span onclick="subtotal();" class="minus">−</span>
+					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total3(this);"/>
+					    <span onclick="subtotal();" class="plus">+</span>
+					</div>					
+					</span>
+				</td>
+				<td><span>$</span><span class="total3">199</span></td>
+			</tr>
+			<tr class="bottomLineSubtotal">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td >
+					<div class="resultSumm"><span class="titleSubTotal">Subtotal:</span><span class="dollarSubtootal">$</span><span class="subtotal"></span></div>
+				</td>
+			</tr>
+			<tr class="bottomLineSubtotal">
+				<td colspan="2"><a href="#" class="ContinueShop"><span><&nbsp  Continue Shopping</span></a></td>
+				<td></td>
+				<td colspan="2">
+					<button class="butttonOrder"><span>Order ></span></button>
+				</td>
+			</tr>
+		</tbody>
+	</form>
+	</table>
+</div>
+<!--  The end Cart form  -->
+
+<!--   Shapping adress and contact info  form  -->
+<form class="formsShipAdrAndContInfo" method="" action="">
+	<div class="formShippingAdressBlock">
+	<span class="formShippingAdress__title">SHIPPING ADRESS</span>
+	<div class="formShippingAdress">
+		<span><label for="formShippingAdress__Countryselect">Select Country</label><br>
+		<select name="" id="formShippingAdress__Countryselect" class="formShippingAdress__Countryselect">
+			<option value="USA">USA</option>
+			<option value="Ukraine">Ukraine</option>
+			<option value="Germany">Germany</option>
+		</select></span>
+
+		<span><label for="formShippingAdress__SRP">State, Region, Province</label><br>
+		<input id="formShippingAdress__SRP" type="text"></span>
+		
+		<span><label for="formShippingAdress__Adress1">Adress 1</label><br>
+		<input id="formShippingAdress__Adress1" type="text"></span>
+
+		<span><label for="formShippingAdress__SelectCity">Select City</label><br>
+		<select name="" id="formShippingAdress__SelectCity" class="formShippingAdress__SelectCity">
+			<option value="California">California</option>
+			<option value="Los Angeles">Los Angeles</option>
+			<option value="Detroit">Detroit</option>
+		</select></span>	
+
+		<span><label for="formShippingAdress__ZipCode">ZIP Code</label><br>
+		<input id="formShippingAdress__ZipCode" type="text"></span>
+
+		<span><label for="formShippingAdress__Adress2">Adress 2</label><br>
+		<input id="formShippingAdress__Adress2" type="text"></span>
+	</div>
+</div>
+
+	<div class="formContactInfoBlock">
+		<span class="formContactInfoBlock__title">CONTACT INFO</span>
+	<div class="formContactInfo">
+		<span><label for="formContactInfo__FullName">Full Name</label><br>
+		<input id="formContactInfo__FullName" type="text"></span>
+
+		<span><label for="formContactInfo__email">Eimail</label><br>
+		<input id="formContactInfo__email" type="text"></span>
+
+		<span><label for="formContactInfo__phone">Phone</label><br>
+		<input id="formContactInfo__phone" type="text"></span>
+	</div>
+</div>
+	<div><a href="#" class="ReturnToCart"><span><&nbsp  Return to Cart</span></a>
+	<button class="butttonPayMethod"><span>Paynment method ></span></button>
+</div>
+</form>
+
+
+
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
+	<script>
+
+
+subtotal();
+	</script>
+
+
+
 </div>
 </body>
 </html>
