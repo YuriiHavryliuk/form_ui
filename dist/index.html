@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form UI</title>
 
 	<link rel="stylesheet" href="css/libs.min.css">
-	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -15,18 +15,19 @@
 	<div class="topSignUpFormBlock">
 		<div class="topSignUpFormHeader">
 			<img class="topSignUpFormHeader__image" src="img/topSignUpFormImage.png" alt="">
-			<span class="topSignUpFormHeader__advice">Alredy Registered?</span>
+			<a href="#"><span class="topSignUpFormHeader__advice">Alredy Registered?</span></a>
 			<span class="topSignUpFormHeader__title">SIGN UP</span>
 		</div>
-			<form class="topSignUpForm" action="">
-					<input class="topSignUpForm__email" type="text" placeholder='&#xf0e0;   E-mail or login'>
-					<input class="topSignUpForm__pass" type="password" placeholder='&#xf023;    Password'>
+			<form class="topSignUpForm" method="get" action="#" name="">
+					<div class="control control-email"><input required class="email topSignUpForm__email" type="text" placeholder='E-mail or login' name="">
+					<i class="fa fa-envelope" aria-hidden="true"></i></div>
+					<div class="control"><input required class="pass topSignUpForm__pass" type="password" placeholder='Password' name=""><i class="fa fa-lock" aria-hidden="true"></i></div>
 					<p class="topSignUpForm__forgot">Forgot password?</p>
-					<button class="topSignUpForm__button topSignUpForm__button-signUp"><span>Sign Up</span></button>
+					<button class="topSignUpForm__button topSignUpForm__button-signUp" name=""><span>Sign Up</span></button>
 					<div class="topSignUpForm__or"><span>OR</span></div>
 					<div class="topSignUpForm__buttons">
-						<button class="topSignUpForm__button topSignUpForm__button-facebook"><span>Login via Facebook</span></button>
-						<button class="topSignUpForm__button topSignUpForm__button-twitter"><span>Login via Twitter</span></button>
+						<button class="topSignUpForm__button topSignUpForm__button-facebook" name=""><span>Login via Facebook</span></button>
+						<button class="topSignUpForm__button topSignUpForm__button-twitter" name=""><span>Login via Twitter</span></button>
 					</div>
 			</form>
 	</div>
@@ -34,19 +35,25 @@
 	<div class="topSignInFormBlock">
 		<div class="topSignInFormHeader">
 			<img class="topSignInFormHeader__image" src="img/topSignInFormImage.png" alt="">
-			<span class="topSignInFormHeader__advice">Create an Accaunt</span>
+			<a href="#"><span class="topSignInFormHeader__advice">Create an Accaunt</span></a>
 			<span class="topSignInFormHeader__title">SIGN IN</span>
 		</div>
-			<form class="topSignInForm" action="">
-					<input class="topSignInForm__email" type="text" placeholder='&#xf0e0;   E-mail or login'>
-					<input class="topSignInForm__pass" type="password" placeholder='&#xf023;    Password'>
+			<form class="topSignInForm" action="#" method="" name="">
+					<div class="control control-email" >
+						<input class="email topSignInForm__email" type="text" placeholder='E-mail or login' required name="">
+						<i class="fa fa-envelope" aria-hidden="true"></i>	
+					</div>
+					<div class="control">
+					<input class="pass topSignInForm__pass" type="password" placeholder='Password' required name="">
+					<i class="fa fa-lock" aria-hidden="true"></i>	
+					</div>
 					<div class="topSignInForm__checkRememberPassBlock">
 						<div class="topSignInForm__checkButton">
-							<input type="checkbox" id="check" name="rememder" value="rememderPassword" checked>
+							<input type="checkbox" id="check" name="rememder" value="rememderPassword" checked name="">
 							<label for="check" class="topSignInForm__remember">Remember password?</label>
 						</div>
 					</div>
-					<button class="topSignInForm__button topSignInForm__button-signIn"><span>Sign In</span></button>
+					<button class="topSignInForm__button topSignInForm__button-signIn" name=""><span>Sign In</span></button>
 					<div class="topSignInForm__or"><span>OR</span></div>
 					<div class="topSignInForm__buttons">
 						<button class="topSignInForm__button topSignInForm__button-facebook"><span>Login via Facebook</span></button>
@@ -60,13 +67,19 @@
 <!--   Four small forms  -->
 <div class="fourSmallForms">
 
-	<form action="" class="smallSignUpForm">
+	<form action="" class="smallSignUpForm" name="smallSignUpForm">
 		<span class="smallSignUpForm__title">SIGN UP</span>
-		<span class="smallSignUpForm__advice">Alredy Registered?</span>
-		<input class="smallSignUpForm__email" type="text" placeholder='&#xf0e0;   E-mail or login'>
-		<input class="smallSignUpForm__pass" type="password" placeholder='&#xf023;    Password'>
+		<a href=""><span class="smallSignUpForm__advice">Alredy Registered?</span></a>
+		<div class="control control-email">
+			<input class="email smallSignUpForm__email" type="text" placeholder='E-mail or login' name="email" required>
+		<i class="fa fa-envelope" aria-hidden="true"></i>	
+		</div>
+		<div class="control">
+			<input class="pass smallSignUpForm__pass" type="password" placeholder='Password' name="password" required>
+		<i class="fa fa-lock" aria-hidden="true"></i>	
+		</div>
 		<p class="smallSignUpForm__forgot">Forgot password?</p>
-		<button class="smallSignUpForm__button smallSignUpForm__button-signUp"><span>Sign Up</span></button>
+		<button class="smallSignUpForm__button smallSignUpForm__button-signUp" name=""><span>Sign Up</span></button>
 		<div class="smallSignUpForm__or"><span>OR</span></div>
 		<div class="smallSignUpForm__buttons">
 		<button class="smallSignUpForm__button smallSignUpForm__button-facebook">
@@ -82,18 +95,24 @@
 
 </form>
 
-	<form action="" class="smallSignInForm">
+	<form action="#" class="smallSignInForm" method="" name="smallSignInForm">
 		<span class="smallSignInForm__title">SIGN IN</span>
-		<span class="smallSignInForm__advice">Alredy Registered?</span>
-		<input class="smallSignInForm__email" type="text" placeholder='&#xf0e0;   E-mail or login'>
-		<input class="smallSignInForm__pass" type="password" placeholder='&#xf023;    Password'>
+		<a href="#"><span class="smallSignInForm__advice">Alredy Registered?</span></a>
+		<div class="control control-email">
+		<input class="smallSignInForm__email email" type="text" placeholder='E-mail or login' required name="email-or-login">
+		<i class="fa fa-envelope" aria-hidden="true"></i>	
+		</div>
+		<div class="control">
+		<input class="smallSignInForm__pass pass" type="password" placeholder='Password'required name="password">
+		<i class="fa fa-lock" aria-hidden="true"></i>	
+		</div>
 		<div class="smallSignInForm__checkRememberPassBlock">
 			<div class="smallSignInForm__checkButton">
 				<input type="checkbox" id="check1" name="rememder1" value="rememderPassword" checked>
 				<label for="check1" class="smallSignInForm__remember">Remember password?</label>
 			</div>
 		</div>
-		<button class="smallSignInForm__button smallSignUInForm__button-signIn"><span>Sign Up</span></button>
+		<button class="smallSignInForm__button smallSignUInForm__button-signIn" name="sign-up"><span>Sign Up</span></button>
 		<div class="smallSignInForm__or"><span>OR</span></div>
 		<div class="smallSignInForm__buttons">
 		<button class="smallSignInForm__button smallSignInForm__button-facebook">
@@ -107,39 +126,50 @@
 		</div>
 	</form>
 <div class="blockResetSubscrForms">
-	<form action="" class="smallResetForm">
+	<form action="#" method="" name="reset" class="smallResetForm">
 		<span class="smallResetForm__title">RESET PASSWORD</span>
-		<span class="smallResetForm__advice">Sign In</span>
-		<input class="smallResetForm__email" type="text" placeholder='&#xf0e0;   E-mail'>
-		<button class="smallResetForm__button smallResetForm__button-signIn"><span>Reset</span></button>
+		<a href="#"><span class="smallResetForm__advice">Sign In</span></a>
+		<div class="control control-email">
+		<input class="smallResetForm__email email" type="text" placeholder='E-mail' required name="email">
+		<i class="fa fa-envelope" aria-hidden="true"></i>	
+		</div>
+		<button class="smallResetForm__button smallResetForm__button-signIn" name="button-reset"><span>Reset</span></button>
 	</form>
-	<form action="" class="smallSubscribingForm">
+	<form action="#" method="" name="subscribing" class="smallSubscribingForm">
 		<span class="smallSubscribingForm__title">SUBSCRIBING</span>
 		<p class="smallSubscribingForm__description">We will never send you spam or some other trash</p>
-		<input class="smallSubscribingForm__email" type="text" placeholder='&#xf0e0;   E-mail'>
-		<button class="smallSubscribingForm__button smallSubscribingForm__button-submite"><span>></span></button>
+		<div class="control control-email control-email-subscribing">
+		<input class="smallSubscribingForm__email email" type="text" placeholder='E-mail' required name="email">
+		<i class="fa fa-envelope" aria-hidden="true"></i>	
+		
+		<button class="smallSubscribingForm__button smallSubscribingForm__button-submite" name="button-subscribing"><span>
+			<i class="fa fa-angle-right""></i></span></button>
+			</div>
 	</form>
 </div>
 </div>
 
 <!--   Two contact form  -->
 <div class="bigTwoForms">
-	<form action="" class="bigForm">
+	<form action="#" method="" name="big-contact-form" class="bigForm">
 		<span class="bigForm__title">CONTACT</span>
 		<span class="bigForm__spanName"><label class="bigForm__nameLabel"for="bigForm__name">Name</label><br>
-		<input class="bigForm__name" id="bigForm__name" type="text" placeholder="Enter your name"></span>
+		<input class="bigForm__name" id="bigForm__name" type="text" placeholder="Enter your name" required name="name"></span>
 		<span><label for="bigForm__email">E-mail</label><br>
-		<input id="bigForm__email" type="text" placeholder="Enter your e-mail"></span>
+		<input id="bigForm__email" type="text" placeholder="Enter your e-mail" required name="email"></span>
 		<span><label for="bigForm__subject">Subject</label><br>
-		<input id="bigForm__subject" type="text" placeholder="Enter your subject"></span>
-		<span><label for="bigForm__select">Select Budget</label><br>
-		<select name="" id="bigForm__select" class="bigForm__select">
+		<input id="bigForm__subject" type="text" placeholder="Enter your subject" required name="subject"></span>
+		<div><label for="bigForm__select">Select Budget</label><br>
+		<div class="select"><select name="select-budget" id="bigForm__select" class="bigForm__select">
 			<option value="$10.000-$15.000">$10.000-$15.000</option>
 			<option value="$5.000-$10.000">$5.000-$10.000</option>
 			<option value="$15.000-$25.000">$5.000-$10.000</option>
-		</select></span>
+		</select>	
+		<i class="fa fa-angle-down"></i>
+	</div>
+		</div>
 		<span><label for="bigForm__message">Message</label><br>
-		<textarea name="" id="bigForm__message" placeholder="Enter your message"></textarea>
+		<textarea required name="message" id="bigForm__message" placeholder="Enter your message"></textarea>
 		</span>
 		<div class="bigForm__checkRememberPassBlock">
 			<div class="bigForm__checkButton">
@@ -147,19 +177,19 @@
 				<label for="sendMeAcopy" class="bigForm__sendMeAcopy">Send me a copy</label>
 			</div>
 		
-		<button class="bigForm__button bigForm__button-signUp"><span>Send</span></button>		
+		<button class="bigForm__button bigForm__button-signUp" name="botton-send"><span>Send</span></button>		
 	</div>
 	</form>
 
-	<form action="" class="formContact">
+	<form action="#" method="" name="small=contact-form" class="formContact">
 		<span class="formContact__title">CONTACT</span>
 		<label class="formContact__NameLabel" for="formContact__name">Name</label>
-		<input class="formContact__name" id="formContact__name" type="text" placeholder="Enter your name">
+		<input class="formContact__name" id="formContact__name" type="text" placeholder="Enter your name" required name="name">
 		<label for="formContact__email">E-mail</label>
-		<input id="formContact__email" type="text" placeholder="Enter your e-mail">
+		<input id="formContact__email" type="text" placeholder="Enter your e-mail" required name="login-or-email">
 		<label for="formContact__message">Message</label>
-		<textarea placeholder="Enter your message" name="" id="formContact__message" cols="30" rows="10"></textarea>
-		<button class="formContact__button formContact__button-send"><span>Send</span></button>
+		<textarea placeholder="Enter your message" name="" id="formContact__message" required name="message"></textarea>
+		<button class="formContact__button formContact__button-send" name="button-send"><span>Send</span></button>
 
 	</form>
 </div>
@@ -168,7 +198,7 @@
 
 <div class="formCart">
 	<table class="formCartTable">
-	<form action="">
+	<form action="#" name="form-cart" method="">
 	<span class="formCartTable__title">CART</span>
 		<colgroup>
 			<col class="img"/>
@@ -197,9 +227,9 @@
 				<td>
 					<span>
 					<div class="number">
-					    <span onclick="subtotal();" class="minus">−</span>
-					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total1(this);"/>
-					    <span onclick="subtotal();" class="plus">+</span>
+					    <span  class="minus">−</span>
+					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total1(this); subtotal();"/>
+					    <span  class="plus">+</span>
 					</div>
 					</span>
 			</td>
@@ -227,9 +257,9 @@
 				<td>
 					<span>
 					<div class="number">
-					    <span onclick="subtotal();" class="minus">−</span>
-					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total2(this);"/>
-					    <span onclick="subtotal();" class="plus">+</span>
+					    <span class="minus">−</span>
+					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total2(this);subtotal();" />
+					    <span class="plus">+</span>
 					</div>					
 					</span>
 				</td>
@@ -258,9 +288,9 @@
 				<td>
 					<span>
 					<div class="number">
-					    <span onclick="subtotal();" class="minus">−</span>
-					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total3(this);"/>
-					    <span onclick="subtotal();" class="plus">+</span>
+					    <span class="minus">−</span>
+					    <input readonly class="plusMinusValue" type="text" value="1" onchange="total3(this); subtotal();"/>
+					    <span class="plus">+</span>
 					</div>					
 					</span>
 				</td>
@@ -276,10 +306,10 @@
 				</td>
 			</tr>
 			<tr class="bottomLineSubtotal">
-				<td colspan="2"><a href="#" class="ContinueShop"><span><&nbsp  Continue Shopping</span></a></td>
+				<td colspan="2"><a href="#" class="ContinueShop"><span><i class="fa fa-chevron-left"></i>&nbsp;  Continue Shopping</span></a></td>
 				<td></td>
 				<td colspan="2">
-					<button class="butttonOrder"><span>Order ></span></button>
+					<button class="butttonOrder"><span>Order&nbsp;&nbsp;<i class="fa fa-angle-right""></i></span></button>
 				</td>
 			</tr>
 		</tbody>
@@ -287,37 +317,39 @@
 	</table>
 </div>
 <!--  The end Cart form  -->
-
 <!--   Shapping adress and contact info  form  -->
-<form class="formsShipAdrAndContInfo" method="" action="">
+<form class="formsShipAdrAndContInfo" method="" action="#" name="form-shipping-contact">
 	<div class="formShippingAdressBlock">
 	<span class="formShippingAdress__title">SHIPPING ADRESS</span>
 	<div class="formShippingAdress">
-		<span><label for="formShippingAdress__Countryselect">Select Country</label><br>
-		<select name="" id="formShippingAdress__Countryselect" class="formShippingAdress__Countryselect">
-			<option value="USA">USA</option>
-			<option value="Ukraine">Ukraine</option>
-			<option value="Germany">Germany</option>
-		</select></span>
+		<div><label for="formShippingAdress__Countryselect">Select Country</label><br>
+		<div class="select"><select name="country" id="country" class="formShippingAdress__Countryselect">
+			<option value="usa">USA</option>
+			<option value="ukraine">Ukraine</option>
+			<option value="germany">Germany</option>
+		</select>	
+	</select>	
+		<i class="fa fa-angle-down"></i>
+	</div>	
+</div>
 
 		<span><label for="formShippingAdress__SRP">State, Region, Province</label><br>
-		<input id="formShippingAdress__SRP" type="text"></span>
+		<input id="formShippingAdress__SRP" type="text" required name="srp"></span>
 		
 		<span><label for="formShippingAdress__Adress1">Adress 1</label><br>
-		<input id="formShippingAdress__Adress1" type="text"></span>
+		<input id="formShippingAdress__Adress1" type="text" required name="adress1"></span>
 
-		<span><label for="formShippingAdress__SelectCity">Select City</label><br>
-		<select name="" id="formShippingAdress__SelectCity" class="formShippingAdress__SelectCity">
-			<option value="California">California</option>
-			<option value="Los Angeles">Los Angeles</option>
-			<option value="Detroit">Detroit</option>
-		</select></span>	
-
+		<div><label for="formShippingAdress__SelectCity">Select City</label><br>
+		<div class="select"><select name="city" id="city" class="formShippingAdress__SelectCity">
+		</select>		
+		<i class="fa fa-angle-down"></i>
+	</div>
+		</div>
 		<span><label for="formShippingAdress__ZipCode">ZIP Code</label><br>
-		<input id="formShippingAdress__ZipCode" type="text"></span>
+		<input id="formShippingAdress__ZipCode" type="text" required name="zip-code"></span>
 
 		<span><label for="formShippingAdress__Adress2">Adress 2</label><br>
-		<input id="formShippingAdress__Adress2" type="text"></span>
+		<input id="formShippingAdress__Adress2" type="text" required name="adress2"></span>
 	</div>
 </div>
 
@@ -325,33 +357,74 @@
 		<span class="formContactInfoBlock__title">CONTACT INFO</span>
 	<div class="formContactInfo">
 		<span><label for="formContactInfo__FullName">Full Name</label><br>
-		<input id="formContactInfo__FullName" type="text"></span>
+		<input id="formContactInfo__FullName" type="text" required name="name"></span>
 
-		<span><label for="formContactInfo__email">Eimail</label><br>
-		<input id="formContactInfo__email" type="text"></span>
+		<span><label for="formContactInfo__email">E-mail</label><br>
+		<input id="formContactInfo__email" type="text" required name="email"></span>
 
 		<span><label for="formContactInfo__phone">Phone</label><br>
-		<input id="formContactInfo__phone" type="text"></span>
+		<input id="formContactInfo__phone" type="text" required name="phone"></span>
 	</div>
 </div>
-	<div><a href="#" class="ReturnToCart"><span><&nbsp  Return to Cart</span></a>
-	<button class="butttonPayMethod"><span>Paynment method ></span></button>
+	<div><a href="#" class="ReturnToCart"><span><i class="fa fa-chevron-left"></i>&nbsp; Return to Cart</span></a>
+	<button class="butttonPayMethod"><span>Paynment method&nbsp;&nbsp;<i class="fa fa-angle-right""></i></span></button>
 </div>
 </form>
 
+<!--   Payment method form  -->
+<form action="#" method="" class="form form-payment" name="form-payment">
+	<div class="left-part">
+		<div class="form-payment__title">PAYMENT METHOD</div>
+		<div class="margin_label"><label class="form-payment__label" for="card_part">Credit Card</label></div>
+		<input  class="form-payment__input form-payment__input--card" id="card_part" type="text" name="card_part1" maxlength="4" required name="card-part1" onkeypress="check_number();" onkeyup="nextJump(this);">
+		<input class="form-payment__input form-payment__input--card" id="card_part" type="text" name="card_part2" maxlength="4" required name="card-part2" onkeypress="check_number();" onkeyup="nextJump(this);">
+		<input class="form-payment__input form-payment__input--card" id="card_part" type="text" name="card_part3" maxlength="4" required name="card-part3" onkeypress="check_number();" onkeyup="nextJump(this);">
+		<input class="form-payment__input form-payment__input--card" id="card_part" type="text" name="card_part4" maxlength="4" required name="card-part4" onkeypress="check_number();" onkeyup="nextJump(this);">
+		<div class="margin_label"><label class="form-payment__label" for="cardholder">Cardholder Name</label></div>
+		<input class="form-payment__input form-payment__input--cardholder" id="cardholder" type="text" name="cardholder-name" required>
+		<div class="margin_label"><label class="form-payment__label">Expire</label></div>
+		<span class="select "><select name="payment-month" class="form-payment__select form-payment__select--month">
+			<option value="January">January</option>
+			<option value="February">February</option>
+			<option value="March">March</option>
+		</select>
+		<i class="fa fa-angle-down sel-expire"></i>
+	</span>
+	<span class="select">
+		<select name="payment-year" class="form-payment__select form-payment__select--year">
+			<option value="2017">2017</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+			<option value="2019">2019</option>
+		</select>
+		<i class="fa fa-angle-down sel-expire"></i>
+	</span>
+		<div class="margin_label"><label class="form-payment__label" for="cvv">CVV</label></div>
+		<input class="form-payment__input form-payment__input--cvv" id="cvv" type="password" name="cvv" maxlength="3" required onkeypress="check_number();">
+	</div>
+	<div class="right-part">
+		<div class="form-payment__title">BILLING ADDRESS</div>
+		<input class="form-payment__checkbox" type="checkbox" id="form-payment__checkbox" name="payment_check" value="payment_check" checked>
+		<label for="form-payment__checkbox" class="form-payment__label form-payment__label--check">Same as shipping address</label>
+		<p class="form-payment__text">
+			A hundred thousand grateful loves to your dear papa and mamma. Is your poor brother recovered of his rack-punch? Oh, dear! Oh, dear! How men should beware of wicked.
+		</p>
+		<div class="form-payment__result"><span class="dollarSubtootal">$</span><span class="subtotal"></span></div>
+	</div>
+	<a href="#" class="form-payment__edit-address"><span><i class="fa fa-chevron-left"></i>&nbsp;  Edit Shipping Address</span></a>
+	<button class="form-payment__button"><span>Place Order&nbsp;&nbsp;<i class="fa fa-angle-right""></i></span></button>
 
+</form>		
 
-
+</div>
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
 	<script>
-
-
 subtotal();
+
 	</script>
 
+ 
 
-
-</div>
 </body>
 </html>

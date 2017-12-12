@@ -6,6 +6,32 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none !important;
+}
+
+input[type="text"], textarea {
+  font-weight: 600 !important;
+}
+
+input::-moz-placeholder, textarea:-moz-placeholder {
+  font-weight: 400;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-weight: 400;
 }
 
 body {
@@ -24,16 +50,72 @@ body {
   font-size: 14px;
 }
 
-button {
+.fa-angle-right, .fa-angle-down {
+  font-size: 24px;
+}
+
+.select {
+  position: relative;
+}
+
+.fa-angle-down {
+  position: absolute;
+  top: 22px;
+  right: 10px;
   cursor: pointer;
 }
 
-button span {
+.sel-expire {
+  top: -1px;
+  right: 30px;
+}
+
+.fa-chevron-left {
+  color: #65abd0;
+  font-size: 14px;
+}
+
+button, select, checkbox {
+  cursor: pointer;
+}
+
+button span, select span, checkbox span {
   color: white;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.36px;
+}
+
+.email, .pass {
+  width: 100% !important;
+}
+
+.email:focus + i, .pass:focus + i {
+  opacity: 1;
+}
+
+.control {
+  position: relative;
+  width: 82%;
+}
+
+.control-email {
+  margin-top: 25px;
+}
+
+.fa-envelope, .fa-lock {
+  color: black;
+  position: absolute;
+  left: 12px;
+  font-size: 16px;
+  top: 16px;
+  opacity: 0.4;
+}
+
+.fa-lock {
+  font-size: 18px;
+  margin-left: 4px;
 }
 
 .twoTopForms {
@@ -54,11 +136,17 @@ button span {
   margin-top: 95px;
 }
 
+.topSignUpForm, .topSignInForm {
+  padding-top: 0px !important;
+}
+
 .topSignUpFormHeader, .topSignInFormHeader {
   max-width: 460px;
   position: relative;
   background: rgba(0, 0, 0, 0.6);
   margin-bottom: -4px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
 }
 
 .topSignUpFormHeader__image, .topSignInFormHeader__image {
@@ -72,6 +160,7 @@ button span {
   position: absolute;
   right: 4%;
   top: 12%;
+  color: white;
 }
 
 .topSignUpFormHeader__title, .topSignInFormHeader__title {
@@ -79,13 +168,11 @@ button span {
   font-weight: 400;
   letter-spacing: 1.6px;
   position: absolute;
-  top: 0%;
-  left: 0%;
-  bottom: 0%;
-  right: 0%;
-  -webkit-transform: translate(33.333%, 33.33%);
-      -ms-transform: translate(33.333%, 33.33%);
-          transform: translate(33.333%, 33.33%);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .topSignUpForm, .topSignInForm, .smallSignUpForm, .smallSignInForm, .smallResetForm {
@@ -121,11 +208,11 @@ button span {
   border: 2px solid #c6ccd2;
   background-color: #ffffff;
   height: 48px;
-  padding-left: 10px;
+  padding-left: 35px;
   color: black;
   font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.2px;
 }
@@ -257,12 +344,12 @@ button span {
   display: block;
   height: 16px;
   width: 16px;
-  border: 1px solid #939598;
+  background-color: #24aa98;
   -webkit-border-radius: 6px;
           border-radius: 6px;
   position: absolute;
   line-height: 18px;
-  top: 0;
+  top: 3px;
   left: 0;
 }
 
@@ -328,10 +415,6 @@ button span {
   right: 4%;
 }
 
-.smallSignUpForm__email, .smallSignInForm__email, .smallResetForm__email {
-  margin-top: 25px;
-}
-
 .smallSignUpForm__forgot, .smallSignInForm__forgot, .smallResetForm__forgot {
   margin-bottom: 20px;
 }
@@ -362,12 +445,12 @@ button span {
   display: block;
   height: 16px;
   width: 16px;
-  border: 1px solid #939598;
+  background-color: #24aa98;
   -webkit-border-radius: 6px;
           border-radius: 6px;
   position: absolute;
   line-height: 18px;
-  top: 0;
+  top: 4px;
   left: 0;
 }
 
@@ -375,7 +458,6 @@ button span {
   content: '\2713';
   color: white;
   text-align: center;
-  border-color: #24aa98;
   font-weight: 600;
   -webkit-border-radius: 6px;
           border-radius: 6px;
@@ -399,11 +481,11 @@ button span {
   border: 2px solid #c6ccd2;
   background-color: #ffffff;
   height: 48px;
-  padding-left: 10px;
+  padding-left: 35px;
   color: black;
   font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.2px;
 }
@@ -437,31 +519,37 @@ button span {
   padding-bottom: 35px;
 }
 
-.smallSubscribingForm input[type="text"] {
+.smallSubscribingForm .control-email-subscribing {
+  margin-left: 15px;
   width: 62%;
+}
+
+.smallSubscribingForm input[type="text"] {
   -webkit-border-radius: 6px;
           border-radius: 6px;
   border: 2px solid #c6ccd2;
   background-color: #ffffff;
   height: 48px;
-  padding-left: 10px;
+  padding-left: 35px;
   color: black;
   font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.2px;
   margin-right: 13px;
-  margin-top: 10px;
 }
 
 .smallSubscribingForm__button {
-  width: 18%;
+  width: 26%;
   -webkit-border-radius: 6px;
           border-radius: 6px;
   border: none;
   background-color: #d9c26c;
   height: 48px;
+  position: absolute;
+  right: -66px;
+  top: 0;
 }
 
 .smallSubscribingForm__title {
@@ -544,7 +632,7 @@ button span {
   padding-right: 15px;
   font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.2px;
 }
@@ -621,6 +709,7 @@ button span {
   background-color: #f2f5f8;
   -webkit-border-radius: 6px;
           border-radius: 6px;
+  padding-bottom: 30px;
 }
 
 .bigTwoForms .bigForm input[type="text"], .bigTwoForms .bigForm textarea, .bigTwoForms .bigForm select {
@@ -647,7 +736,7 @@ button span {
   font-weight: 600;
   letter-spacing: 0.32px;
   position: absolute;
-  left: 4%;
+  left: 2%;
   top: 2%;
 }
 
@@ -691,12 +780,12 @@ button span {
   display: block;
   height: 16px;
   width: 16px;
-  border: 1px solid #939598;
+  background-color: #24aa98;
   -webkit-border-radius: 6px;
           border-radius: 6px;
   position: absolute;
   line-height: 18px;
-  top: 0;
+  top: 3px;
   left: 0;
 }
 
@@ -704,7 +793,6 @@ button span {
   content: '\2713';
   color: white;
   text-align: center;
-  border-color: #24aa98;
   font-weight: 600;
   -webkit-border-radius: 6px;
           border-radius: 6px;
@@ -815,7 +903,7 @@ button span {
   letter-spacing: 0.32px;
   position: absolute;
   left: 2%;
-  top: 4%;
+  top: 3%;
 }
 
 .formCartTable span {
@@ -1080,6 +1168,7 @@ button span {
   font-size: 14px;
   line-height: 32px;
   letter-spacing: 0.28px;
+  width: 108px;
 }
 
 .subtotal, .dollarSubtootal {
@@ -1128,7 +1217,7 @@ button span {
 /* shipping adress and contact info form    */
 .formsShipAdrAndContInfo {
   width: 100%;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
   margin-top: 20px;
   -webkit-border-radius: 6px;
           border-radius: 6px;
@@ -1174,7 +1263,7 @@ button span {
   padding-right: 15px;
   font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.2px;
   margin-top: 10px;
@@ -1276,7 +1365,7 @@ button span {
   padding-right: 15px;
   font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.2px;
   margin-top: 10px;
@@ -1289,4 +1378,177 @@ button span {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
+}
+
+/* PAYMENT METHOD form    */
+.form-payment {
+  background-color: #f2f5f8;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  width: 100%;
+  margin-top: 25px;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.form-payment .left-part, .form-payment .right-part {
+  width: 50%;
+  position: relative;
+}
+
+.form-payment input[type="text"], .form-payment input[type="password"] {
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  border: 2px solid #c6ccd2;
+  background-color: #ffffff;
+  height: 48px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.form-payment .form-payment__input--card, .form-payment .form-payment__input--cvv {
+  width: 74px;
+  margin-right: 5px;
+}
+
+.form-payment .form-payment__input--cardholder {
+  width: 324px;
+}
+
+.form-payment select {
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  border: none;
+  background-color: #d9c26c;
+  height: 48px;
+  padding-left: 10px;
+  padding-right: 15px;
+  width: 152px;
+  margin-right: 15px;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  font-weight: 600;
+}
+
+.form-payment .margin_label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.form-payment__title {
+  margin-bottom: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+  color: #393635;
+}
+
+.form-payment__label {
+  color: #b4bbc2;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+
+.form-payment__label--check {
+  display: inline-block;
+  color: #383737;
+  font-weight: 600;
+  position: relative;
+  left: 25px;
+}
+
+.form-payment__label--check:before {
+  content: "";
+  display: inline-block;
+  background-color: #24aa98;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: -25px;
+}
+
+.form-payment__checkbox {
+  display: none;
+}
+
+.form-payment__checkbox:checked + label:before {
+  content: "\2713";
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.form-payment__text {
+  color: #b4bbc2;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+
+.form-payment__result {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+}
+
+.form-payment__edit-address {
+  position: absolute;
+  text-decoration: none;
+  bottom: 0;
+  left: 35px;
+  margin-bottom: 40px;
+}
+
+.form-payment__edit-address span {
+  color: #65abd0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+}
+
+.form-payment__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 30px;
+  margin-right: 25px;
+  border: none;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  background-color: #24aa98;
+  padding: 12px 18px;
+}
+
+.form-payment__input--cvv {
+  margin-bottom: 68px;
+}
+
+@media (max-width: 480px) {
+  .twoTopForms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
 }

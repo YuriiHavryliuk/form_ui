@@ -55,3 +55,48 @@ $('.subtotal').text(subtotal);
 }
 
 
+
+
+
+// function check number 
+function check_number(){
+        if((event.keyCode < 48)||(event.keyCode > 57)) event.returnValue=false;
+
+}
+
+
+
+// function of the output of a dependent list
+var cities = {
+  usa: ["California", "Los Angeles", "Detroit", "Philadelphia", "Boston"],
+  ukraine: ["Киев", "Харьков", "Полтава", "Чернигов", "Ровно"],
+  germany: ["Werder", "München", "Bremen"] 
+};
+var country = document.getElementById("country");
+var city = document.querySelector("#city");
+window.onload = selectCountry;
+country.onchange = selectCountry;
+
+function selectCountry(ev){
+  city.innerHTML = "";
+  var c = this.value || "usa", o;
+  for(let i = 0; i < cities[c].length; i++){
+    o = new Option(cities[c][i],i,false,false);
+    city.add(o);
+  };
+}
+
+//function next input (number of card)
+function nextJump(x) {
+	if (x.value.length == 4) {
+		
+		do {
+			x = x.nextSibling;
+		}
+		while (x && !(/text/.test(x.type)));
+		if (x && /text/.test(x.type)) {
+			$(x).select();
+		}
+	}
+}
+
